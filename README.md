@@ -1,29 +1,45 @@
-# Proyecto de Web Scraping - Analítica de Datos con Python Beautiful Soup, Selenium
+🕵️‍♂️ Web Scraping & Data Analysis: BBC Mundo
+Este proyecto realiza un ciclo completo de analítica de datos: desde la extracción automatizada de noticias hasta el procesamiento de lenguaje natural (NLP) para medir sentimientos y tendencias.
 
-Este proyecto contiene scripts de Python para extraer noticias de la BBC Mundo Latinoamerica, generando un CSV con título, descripción, fecha, texto completo y temas relacionados.
+🚀 Módulos del Proyecto
+Extracción (Scraping)
+scraper_bs4.py: Extracción estática de alto rendimiento.
 
-## Contenido
-* `scraper_bs4.py`: Extracción estática usando BeautifulSoup.
-* `scraper_selenium.py`: Extracción dinámica usando Selenium.
-¿Cuál método usar?
+scraper_selenium.py: Extracción dinámica para contenido renderizado con JavaScript.
+
 	          Beautiful Soup	                 Selenium
 Velocidad	   ~30 seg	                        ~90 seg
 JavaScript	   No ejecuta	                   Renderiza todo
 Recursos	    Liviano	                    Abre Chrome completo
 Usar cuando...	El HTML ya tiene los datos	 La página carga con JS/AJAX
 
+Inteligencia de Datos (NLP)
+analisis_sentimientos.py: Implementa TextBlob para clasificar las noticias en Positivas, Negativas o Neutras basándose en la polaridad del texto.
 
-## Tecnologías
-* Python 3, Beautifoulsoup
-* selenium, Goole Chrome
+relacionados_temas.py: Genera una Nube de Palabras (WordCloud) analizando la frecuencia de temas y títulos para identificar tendencias globales.
 
-## Ética
-* Los datos de BBC Mundo son propiedad de BBC
-* Los scripts incluyen time.sleep(2) entre solicitudes para respetar el servicio 
-* Revisa siempre robors.txt antes de scrapear cualquier sitio
+📊 Visualización de Tendencias
+El proyecto genera automáticamente una representación visual de los temas más candentes en la BBC Mundo:
 
-## Autor
-Guillermo Leon Loaiza Mesa
+🛠️ Tecnologías y Librerías
+Procesamiento: Python 3.12, Pandas
 
-## Instructora
-Darkanita 
+Scraping: BeautifulSoup4, Selenium
+
+IA/NLP: TextBlob
+
+Gráficos: Matplotlib, WordCloud
+
+⚖️ Ética y Buenas Prácticas
+Respeto al Servidor: Los scripts incluyen time.sleep(2) para evitar sobrecargar los servidores de la BBC.
+
+Propiedad Intelectual: Los datos extraídos son propiedad de la BBC; este proyecto tiene fines académicos.
+
+Transparencia: Se recomienda revisar siempre el archivo robots.txt del sitio objetivo.
+
+👥 Créditos
+Autor: Guillermo Leon Loaiza Mesa
+
+Instructora: Darkanita
+
+Materia: Programación para Analítica de Datos
